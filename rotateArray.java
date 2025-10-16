@@ -5,7 +5,7 @@ class Solution{
     int[] rotated = new int[n];
     k = k % n;
     for(int i = 0; i < n;i++){
-      rotated[(i+k)%k] = nums[i];
+      rotated[(i+k)%n] = nums[i];  // (0+3) % 7 = 3, (1+3) % 7 = 4
     }
     for(int i = 0; i < n;i++){
       nums[i] = rotated[i];
