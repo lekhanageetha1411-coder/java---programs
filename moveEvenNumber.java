@@ -3,7 +3,7 @@ public class Solution{
   public void moveEvenNumber(int[] nums){
     int n = nums.length;
     int left = 0;
-    int rigth = n-1;
+    int right = n-1;
 // left has to be less than rigth because left= 0 , right = n-1, n=6, n-1 = 5 we have do the iteration till the condition satisfies
   while(left<right){
     // if condition here from our array nums[left] = nums[0]= 1 %2 ==0 false
@@ -18,8 +18,8 @@ public class Solution{
     else{
       
       int temp = nums[left];    // temp = nums[left] = 1
-      nums[left] = nums[rigth];   // nums[left] = nums[rigth] , nums[left] = 6;
-      nums[rigth] = temp;          // nums[rigth] = temp , temp = 1 so right = 1 
+      nums[left] = nums[right];   // nums[left] = nums[rigth] , nums[left] = 6;
+      nums[right] = temp;          // nums[rigth] = temp , temp = 1 so right = 1 
       left++;
       right--;
     }
